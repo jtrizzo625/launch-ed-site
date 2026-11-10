@@ -1,0 +1,281 @@
+import Link from "next/link";
+import Frame from "@/components/Frame";
+import { site } from "@/lib/site";
+
+const iconProps = {
+  className: "icon", viewBox: "0 0 24 24", fill: "none", stroke: "#0f2440",
+  strokeWidth: 1.4, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true,
+};
+
+export const paths = [
+  {
+    title: "Mechanical or aerospace engineers",
+    text: "You're interested in robotics, drones, vehicles, aircraft and other engineering challenges in the physical realm.",
+    icon: <svg {...iconProps}><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" /></svg>,
+  },
+  {
+    title: "Coders",
+    text: "You love to ship games or apps, contribute to open-source projects, and keep tabs on digital startups.",
+    icon: <svg {...iconProps}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" /></svg>,
+  },
+  {
+    title: "Founders",
+    text: "You want to start a small business or venture, which means tackling everything from pricing to branding to operations.",
+    icon: <svg {...iconProps}><path d="M4 20h16M6 16l4-5 3 3 5-7M15 7h3v3" /></svg>,
+  },
+  {
+    title: "Designers",
+    text: "You see problems in the world and dream about designing elegant, creative, human-centered solutions to them.",
+    icon: <svg {...iconProps}><path d="M3 21l3-1 12-12-2-2L4 18l-1 3zM14 6l2 2M17 3l4 4" /></svg>,
+  },
+];
+
+export function WhoFor() {
+  return (
+    <section id="for" className="section graph">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">§01 — Who this is for</span>
+          <h2>Students in grades 9–12 who are drawn to one of these paths.</h2>
+        </div>
+        <div className="grid-4">
+          {paths.map((p) => (
+            <div key={p.title} className="path">
+              {p.icon}
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export const stages = [
+  {
+    bar: ["GRADES 9–10", "EXPLORE"],
+    title: "Grades 9–10: Explore & Build",
+    items: [
+      "Course planning for engineering, design or business major readiness",
+      "Project portfolio development coaching (products, businesses, apps, devices and more)",
+      "Extracurricular activities planning and prioritization",
+      "Career and interest exploration coaching",
+    ],
+  },
+  {
+    bar: ["GRADE 11", "PLAN"],
+    title: "Grade 11: Plan & Position",
+    items: [
+      "Building a balanced college list",
+      "Financial aid strategy for both merit and need-based aid",
+      "Early decision / early action strategy",
+      "Testing strategy (SAT/ACT)",
+    ],
+  },
+  {
+    bar: ["GRADE 12", "APPLY"],
+    title: "Grade 12: Apply",
+    items: [
+      "Application essays: personal statement, supplemental essays, UC PIQs and more",
+      "Activities list and project write-ups",
+      "Application timeline and submission",
+      "Comparing financial aid offers",
+    ],
+  },
+];
+
+export function HowIHelp({ heading = "How I help", label = "§02 — Services" }) {
+  return (
+    <section id="services" className="section white">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">{label}</span>
+          <h2>{heading}</h2>
+        </div>
+        <div className="grid-3">
+          {stages.map((s) => (
+            <div key={s.title} className="module">
+              <div className="module-bar"><span>{s.bar[0]}</span><span>{s.bar[1]}</span></div>
+              <div className="module-body">
+                <h3>{s.title}</h3>
+                <ul className="spec">
+                  {s.items.map((i) => <li key={i}>{i}</li>)}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Headshot() {
+  return (
+    <Frame caption={["FIG. 02", "J. RIZZO"]} light>
+      {site.headshot ? (
+        <img src={site.headshot} alt="James Rizzo, founder of Launch Educational Consulting" />
+      ) : (
+        <div className="placeholder">[Headshot]</div>
+      )}
+    </Frame>
+  );
+}
+
+export const facts = [
+  <>I spent 9 years as a product management leader at companies like Lyft, Intuit and Headway, where I led teams of engineers to build, launch and commercialize new products. My work has been featured in <a href={site.forbesUrl}>Forbes</a>.</>,
+  <>I&apos;ve sat on technical hiring committees and reviewed hundreds of résumés from college students and recent graduates for positions in engineering, design, marketing and product management at both Lyft and Intuit.</>,
+  <>I&apos;m a college counselor for ScholarMatch, where I help first-generation students navigate the college application process. I also hold a college counseling certificate (Core Concepts for IECs) from the National Association for College Admission Counseling (NACAC).</>,
+  <>In 2016, I won the Schwarzman Scholarship, a highly selective graduate fellowship, and earned a Master&apos;s in Global Affairs at Tsinghua University in Beijing, China.</>,
+];
+
+export function AboutBlock({ label = "§03 — About James Rizzo", showLink = false }) {
+  return (
+    <section id="about" className="section graph">
+      <div className="wrap about-grid">
+        <Headshot />
+        <div className="about-copy">
+          <span className="label">{label}</span>
+          <h2>A product leader turned college counselor.</h2>
+          <div className="facts">
+            {facts.map((f, i) => (
+              <div key={i} className="fact">
+                <span className="n">{String(i + 1).padStart(2, "0")}</span>
+                <p>{f}</p>
+              </div>
+            ))}
+          </div>
+          {showLink && <Link href="/about" style={{ fontFamily: "var(--mono)", fontSize: 14 }}>More about me →</Link>}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export const ventureSteps = [
+  ["Find a real problem", "Talk to the people who have it before building anything."],
+  ["Set the strategy", "Who it's for, what success looks like, what to skip."],
+  ["Build the roadmap", "Milestones that fit around school, sports, and healthy rest."],
+  ["Ship it", "Launch a first version, get real users, learn from them."],
+  ["Tell the story", "Turn the build log into essays, activities and portfolios."],
+];
+
+export function Venture({ label = "§04 — Venture coaching" }) {
+  return (
+    <section id="venture" className="section blueprint">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">{label}</span>
+          <h2>Your student has ideas. I coach them on how to bring them to life.</h2>
+          <p className="lede">Students get the same playbook I used to launch products at Lyft and Intuit, scaled to a teenager&apos;s time and budget.</p>
+        </div>
+        <div className="grid-5">
+          {ventureSteps.map(([t, d], i) => (
+            <div key={t} className="vstep">
+              <span className="num">STEP_0{i + 1} {i === 4 ? "✓" : "→"}</span>
+              <h3>{t}</h3>
+              <p>{d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HowItWorks() {
+  const steps = [
+    ["Free consultation", "30 minutes with you and your student to understand goals and timing."],
+    ["A written plan", "A roadmap of courses, projects, deadlines and essays, built around your student."],
+    ["Regular coaching", "Live sessions over video, with feedback between meetings."],
+    ["Apply with confidence", "Applications that show who your student is and what they've built."],
+  ];
+  return (
+    <section className="section graph">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">How it works</span>
+          <h2>From first conversation to submitted application.</h2>
+        </div>
+        <div className="grid-4">
+          {steps.map(([t, d], i) => (
+            <div key={t} className="step">
+              <span className="num">0{i + 1}</span>
+              <h3>{t}</h3>
+              <p>{d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Testimonials and outcomes. Hidden until site.showOutcomes is true.
+// Replace these entries with real quotes (with written permission) and real results.
+export const testimonials = [
+  { tag: "LOG_01 · STUDENT", quote: "[Testimonial quote]", by: "[First name, last initial] · [Class of 2027]" },
+  { tag: "LOG_02 · PARENT", quote: "[Testimonial quote]", by: "[Parent of a Class of 2027 student]" },
+  { tag: "LOG_03 · STUDENT", quote: "[Testimonial quote]", by: "[First name, last initial] · [Intended major]" },
+];
+export const outcomes = ["[College / program]", "[College / program]", "[College / program]", "[College / program]"];
+
+export function Outcomes() {
+  if (!site.showOutcomes) return null;
+  return (
+    <section id="outcomes" className="section graph">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">Testimonials &amp; outcomes</span>
+          <h2>What students and families say.</h2>
+        </div>
+        <div className="grid-3" style={{ marginBottom: 24 }}>
+          {testimonials.map((t) => (
+            <figure key={t.tag} className="quote">
+              <span className="label" style={{ fontSize: 11.5 }}>{t.tag}</span>
+              <blockquote>{t.quote}</blockquote>
+              <figcaption>{t.by}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="module">
+          <div className="module-bar"><span>ADMISSIONS OUTCOMES</span><span>CLASS OF 2027</span></div>
+          <div className="grid-4" style={{ border: "none" }}>
+            {outcomes.map((o, i) => (
+              <div key={i}>
+                <span className="label" style={{ color: "var(--muted)", fontSize: 11.5 }}>Admitted</span>
+                <span style={{ fontSize: 17, fontWeight: 500, color: "var(--navy)" }}>{o}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function CTA() {
+  return (
+    <section className="cta blueprint">
+      <div className="wrap">
+        <span className="label">Next step</span>
+        <h2>Let&apos;s talk about what your student is building.</h2>
+        <p className="lede">A free 30-minute consultation. You&apos;ll leave with at least one concrete next step, whether or not we work together.</p>
+        <Link href="/book" className="btn btn-primary">Book a free consultation →</Link>
+      </div>
+    </section>
+  );
+}
+
+export function PageHero({ label, title, lede }) {
+  return (
+    <section className="page-hero blueprint">
+      <div className="wrap">
+        <span className="label">{label}</span>
+        <h1>{title}</h1>
+        {lede && <p className="lede">{lede}</p>}
+      </div>
+    </section>
+  );
+}
