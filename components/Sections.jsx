@@ -207,43 +207,69 @@ export function HowItWorks() {
   );
 }
 
-// Testimonials and outcomes. Hidden until site.showOutcomes is true.
-// Replace these entries with real quotes (with written permission) and real results.
+// Testimonials. Add a quote by filling in `quote`; entries with quote: null are hidden.
+// Only publish quotes you have written permission to use.
+export const featuredTestimonial = {
+  quote:
+    "Working with James was an incredible experience! He helped me take my essay to the next level with thoughtful, detailed feedback and expert advice. Thanks to his guidance, my essay became so much stronger and more effective.",
+  name: "Ethan C.",
+  detail: "Admitted to Stanford University, School of Engineering (Mech. E)",
+};
+
 export const testimonials = [
-  { tag: "LOG_01 · STUDENT", quote: "[Testimonial quote]", by: "[First name, last initial] · [Class of 2027]" },
-  { tag: "LOG_02 · PARENT", quote: "[Testimonial quote]", by: "[Parent of a Class of 2027 student]" },
-  { tag: "LOG_03 · STUDENT", quote: "[Testimonial quote]", by: "[First name, last initial] · [Intended major]" },
+  {
+    tag: "LOG_01 · STUDENT",
+    quote:
+      "My favorite part of working with James was how open he was. Working with him was a dialogue, he wasn’t doing it for me or telling me what to do, he was guiding me to discover more about myself and express it. Also, James helped me talk about a technical design project I worked on in a way that was specific, understandable for a non technical audience, and made my impact clear. As a result of James’s help, I looked at my application and felt like I was a standout candidate.",
+    by: "Andrew W. · 2026 application pending",
+  },
+  {
+    tag: "LOG_02 · STUDENT",
+    quote:
+      "Working with James was extremely helpful. He gave clear, thoughtful feedback. His comments were always detailed, honest and easy to apply, and I could tell he genuinely cared about helping me improve my writing. Thanks to his guidance, my essays became more focused, personal, and effective. I would highly recommend him to any student looking for college application guidance.",
+    by: "Aaron S. · Admitted to UC Davis, Managerial Economics",
+  },
+  // Parent testimonial: replace null with the quote and fill in `by`.
+  { tag: "LOG_03 · PARENT", quote: null, by: "" },
 ];
-export const outcomes = ["[College / program]", "[College / program]", "[College / program]", "[College / program]"];
+
+export function FeaturedQuote() {
+  const t = featuredTestimonial;
+  if (!t || !t.quote) return null;
+  return (
+    <section className="featured-quote">
+      <div className="wrap">
+        <figure>
+          <blockquote>“{t.quote}”</blockquote>
+          <figcaption>
+            <strong>{t.name}</strong>
+            <span>{t.detail}</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  );
+}
 
 export function Outcomes() {
   if (!site.showOutcomes) return null;
+  const shown = testimonials.filter((t) => t.quote);
+  if (shown.length === 0) return null;
   return (
-    <section id="outcomes" className="section graph">
+    <section id="testimonials" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">Testimonials &amp; outcomes</span>
-          <h2>What students and families say.</h2>
+          <span className="label">§05 — Testimonials</span>
+          <h2>What students say.</h2>
         </div>
-        <div className="grid-3" style={{ marginBottom: 24 }}>
-          {testimonials.map((t) => (
+        <div className={shown.length === 2 ? "grid-2" : "grid-3"}>
+          {shown.map((t) => (
             <figure key={t.tag} className="quote">
               <span className="label" style={{ fontSize: 11.5 }}>{t.tag}</span>
-              <blockquote>{t.quote}</blockquote>
+              <blockquote>“{t.quote}”</blockquote>
               <figcaption>{t.by}</figcaption>
             </figure>
           ))}
-        </div>
-        <div className="module">
-          <div className="module-bar"><span>ADMISSIONS OUTCOMES</span><span>CLASS OF 2027</span></div>
-          <div className="grid-4" style={{ border: "none" }}>
-            {outcomes.map((o, i) => (
-              <div key={i}>
-                <span className="label" style={{ color: "var(--muted)", fontSize: 11.5 }}>Admitted</span>
-                <span style={{ fontSize: 17, fontWeight: 500, color: "var(--navy)" }}>{o}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
@@ -276,7 +302,7 @@ export function Packages() {
     <section id="packages" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§05 — Packages</span>
+          <span className="label">§06 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
           <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
@@ -317,7 +343,7 @@ export function FAQ() {
     <section id="faq" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§06 — FAQ</span>
+          <span className="label">§07 — FAQ</span>
           <h2>Common questions.</h2>
         </div>
         <div className="faq">

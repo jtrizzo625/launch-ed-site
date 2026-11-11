@@ -239,3 +239,12 @@ p { margin: 0; }
   .grid-4, .grid-3 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 38px; }
 }
+
+/* Featured quote under hero */
+.featured-quote { background: var(--white); border-bottom: 1px solid var(--line); padding: 56px 0; }
+.featured-quote figure { margin: 0 auto; max-width: 900px; text-align: center; display: flex; flex-direction: column; gap: 20px; }
+.featured-quote blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 24px; line-height: 1.5; color: var(--navy); }
+.featured-quote figcaption { display: flex; flex-direction: column; gap: 4px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.featured-quote figcaption strong { color: var(--accent); font-weight: 500; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+@media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } .featured-quote blockquote { font-size: 19px; } }
