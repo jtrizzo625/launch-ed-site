@@ -85,7 +85,7 @@ export const stages = [
   },
 ];
 
-export function HowIHelp({ heading = "How I help", label = "§02 — Services" }) {
+export function HowIHelp({ heading = "How I help", label = "§03 — How I help" }) {
   return (
     <section id="services" className="section white">
       <div className="wrap">
@@ -123,14 +123,15 @@ export function Headshot() {
   );
 }
 
-export const facts = [
-  <>I spent 9 years as a product management leader at companies like Lyft, Intuit and Headway, where I led teams of engineers to build, launch and commercialize new products. My work has been featured in <a href={site.forbesUrl}>Forbes</a>.</>,
-  <>I&apos;ve sat on technical hiring committees and reviewed hundreds of résumés from college students and recent graduates for positions in engineering, design, marketing and product management at both Lyft and Intuit.</>,
-  <>I&apos;m a college counselor for ScholarMatch, where I help first-generation students navigate the college application process. I also hold a college counseling certificate (Core Concepts for IECs) from the National Association for College Admission Counseling (NACAC).</>,
-  <>In 2016, I won the Schwarzman Scholarship, a highly selective graduate fellowship, and earned a Master&apos;s in Global Affairs at Tsinghua University in Beijing, China.</>,
+export const aboutParagraphs = [
+  <>I spent nine years as a product management leader, leading teams of engineers and designers to launch and commercialize new products at companies like Lyft, Intuit and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
+  <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads who majored in disciplines like engineering, business, and design.</>,
+  <>Now I help high school builders who are just starting their journey navigate the unique challenges that come with being admitted to a STEM major and landing in a STEM career: building things that matter to them, choosing colleges and programs that suit them, and helping them to tell their story on their application.</>,
+  <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
+  <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
 
-export function AboutBlock({ label = "§03 — About James Rizzo", showLink = false }) {
+export function AboutBlock({ label = "§02 — About James Rizzo" }) {
   return (
     <section id="about" className="section graph">
       <div className="wrap about-grid">
@@ -138,15 +139,9 @@ export function AboutBlock({ label = "§03 — About James Rizzo", showLink = fa
         <div className="about-copy">
           <span className="label">{label}</span>
           <h2>A product leader turned college counselor.</h2>
-          <div className="facts">
-            {facts.map((f, i) => (
-              <div key={i} className="fact">
-                <span className="n">{String(i + 1).padStart(2, "0")}</span>
-                <p>{f}</p>
-              </div>
-            ))}
+          <div className="about-text">
+            {aboutParagraphs.map((p, i) => <p key={i}>{p}</p>)}
           </div>
-          {showLink && <Link href="/about" style={{ fontFamily: "var(--mono)", fontSize: 14 }}>More about me →</Link>}
         </div>
       </div>
     </section>
@@ -227,7 +222,7 @@ export function Outcomes() {
     <section id="outcomes" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">Testimonials &amp; outcomes</span>
+          <span className="label">§05 — Testimonials &amp; outcomes</span>
           <h2>What students and families say.</h2>
         </div>
         <div className="grid-3" style={{ marginBottom: 24 }}>
@@ -249,6 +244,89 @@ export function Outcomes() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export const packages = [
+  {
+    bar: ["GRADES 9–10", "PLAN"],
+    title: "Builder Roadmap",
+    text: "A yearly plan for younger students: course planning, extracurricular and summer strategy, and a project to build over time.",
+    items: ["Course and extracurricular planning", "Project and portfolio development", "Career and interest exploration", "Rolls into the Application Package"],
+  },
+  {
+    bar: ["GRADES 11–12", "APPLY"],
+    title: "Application Package",
+    text: "Full support from junior spring through submitted applications and financial aid offers.",
+    items: ["Balanced college list and ED/EA strategy", "Merit and need-based aid strategy", "All essays and the activities list", "Comparing financial aid offers"],
+  },
+  {
+    bar: ["ANY GRADE", "BUILD"],
+    title: "Venture & Project Coaching",
+    text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today.",
+    items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
+  },
+];
+
+export function Packages() {
+  return (
+    <section id="packages" className="section white">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">§06 — Packages</span>
+          <h2>Choose the support that fits where your student is.</h2>
+          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
+        </div>
+        <div className="grid-3">
+          {packages.map((p) => (
+            <div key={p.title} className="module">
+              <div className="module-bar"><span>{p.bar[0]}</span><span>{p.bar[1]}</span></div>
+              <div className="module-body">
+                <h3>{p.title}</h3>
+                <p className="pkg-text">{p.text}</p>
+                <ul className="spec">
+                  {p.items.map((i) => <li key={i}>{i}</li>)}
+                </ul>
+                <Link href="/book" className="pkg-link">Discuss on a free call →</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
+          Only need help with essays? <a href={site.essayLaunchUrl}>Essay Launch</a> offers essay-only coaching.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export const faqs = [
+  ["Do you work with students outside Los Angeles?", "Yes. All sessions take place over video, so I work with families nationwide."],
+  ["When should we start?", "Students can start as early as 9th grade, when course and project choices begin to shape their options. Many families start college application support in the spring of junior year."],
+  ["Does my student need to have a project already?", "No. Some students come with a product or business underway; others come with an idea or just a curiosity. Venture coaching starts wherever your student is."],
+  ["Will you write my student's essays or build their project?", "No. Your student does the writing and the building. I coach, ask questions and give feedback, so the work stays authentically theirs."],
+  ["Can you guarantee admission to a particular college?", "No one can honestly guarantee admission. What I can promise is a thoughtful plan, a balanced college list, and applications that show who your student really is."],
+  ["How does pricing work?", "Multi-year planning and application support are offered as packages; venture coaching is hourly. After a free consultation, I'll send a quote based on your student's needs."],
+];
+
+export function FAQ() {
+  return (
+    <section id="faq" className="section graph">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">§07 — FAQ</span>
+          <h2>Common questions.</h2>
+        </div>
+        <div className="faq">
+          {faqs.map(([q, a]) => (
+            <details key={q}>
+              <summary>{q}</summary>
+              <p>{a}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
