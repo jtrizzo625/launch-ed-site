@@ -222,7 +222,7 @@ export function Outcomes() {
     <section id="outcomes" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§05 — Testimonials &amp; outcomes</span>
+          <span className="label">Testimonials &amp; outcomes</span>
           <h2>What students and families say.</h2>
         </div>
         <div className="grid-3" style={{ marginBottom: 24 }}>
@@ -276,7 +276,7 @@ export function Packages() {
     <section id="packages" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§06 — Packages</span>
+          <span className="label">§05 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
           <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
@@ -317,7 +317,7 @@ export function FAQ() {
     <section id="faq" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§07 — FAQ</span>
+          <span className="label">§06 — FAQ</span>
           <h2>Common questions.</h2>
         </div>
         <div className="faq">
