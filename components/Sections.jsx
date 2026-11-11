@@ -35,8 +35,8 @@ export function WhoFor() {
     <section id="for" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§01 — Who this is for</span>
-          <h2>Students in grades 9–12 who are drawn to one of these paths.</h2>
+          <span className="label">§02 — Who this is for</span>
+          <h2>Does this sound like your student?</h2>
         </div>
         <div className="grid-4">
           {paths.map((p) => (
@@ -131,7 +131,7 @@ export const aboutParagraphs = [
   <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
 
-export function AboutBlock({ label = "§02 — About James Rizzo" }) {
+export function AboutBlock({ label = "§01 — About James Rizzo" }) {
   return (
     <section id="about" className="section graph">
       <div className="wrap about-grid">

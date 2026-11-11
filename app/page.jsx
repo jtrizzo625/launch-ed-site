@@ -32,8 +32,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <WhoFor />
       <AboutBlock />
+      <WhoFor />
       <HowIHelp />
       <Venture />
       <Outcomes />
