@@ -32,7 +32,7 @@ export const paths = [
 
 export function WhoFor() {
   return (
-    <section id="for" className="section graph">
+    <section id="for" className="section white">
       <div className="wrap">
         <div className="section-head">
           <span className="label">§02 — Who this is for</span>
@@ -87,7 +87,7 @@ export const stages = [
 
 export function HowIHelp({ heading = "How I help", label = "§03 — How I help" }) {
   return (
-    <section id="services" className="section white">
+    <section id="services" className="section graph">
       <div className="wrap">
         <div className="section-head">
           <span className="label">{label}</span>
