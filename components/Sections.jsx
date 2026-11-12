@@ -52,6 +52,51 @@ export function WhoFor() {
   );
 }
 
+export const problems = [
+  {
+    title: "The portfolio",
+    body: "Strong applicants show what they've built and how they built it: the goals, setbacks and decisions behind the work. Design programs often require a formal portfolio. Having launched products myself, I coach students through documenting and presenting their work.",
+  },
+  {
+    title: "The major decision",
+    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible.",
+  },
+  {
+    title: "The college list",
+    body: "These programs are often harder to get into than the university as a whole, so a school that looks like a safe bet may not be one for your student.",
+  },
+  {
+    title: "Course planning",
+    body: "Engineering programs expect calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade.",
+  },
+  {
+    title: "The essay",
+    body: "Explaining technical work to non-technical readers, in a way that reveals character and values, is a distinct writing challenge. It's the one I specialize in.",
+  },
+];
+
+export function EngineeringProblem() {
+  return (
+    <section id="problem" className="section blueprint problem-section">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">§03 — The problem</span>
+          <h2>General college advice doesn&apos;t account for how admission works for engineering, business and design programs. <em>I do.</em></h2>
+        </div>
+        <div className="problem-grid">
+          {problems.map((problem, index) => (
+            <div key={problem.title} className={`path${index === 0 ? " problem-featured" : ""}`}>
+              <h3>{problem.title}</h3>
+              <p>{problem.body}</p>
+            </div>
+          ))}
+        </div>
+        <Link href="#services" className="pkg-link">See how I help →</Link>
+      </div>
+    </section>
+  );
+}
+
 export const stages = [
   {
     bar: ["GRADES 9–10", "EXPLORE"],
@@ -85,7 +130,7 @@ export const stages = [
   },
 ];
 
-export function HowIHelp({ heading = "How I help", label = "§03 — How I help" }) {
+export function HowIHelp({ heading = "How I help", label = "§04 — How I help" }) {
   return (
     <section id="services" className="section graph">
       <div className="wrap">
@@ -156,7 +201,7 @@ export const ventureSteps = [
   ["Tell the story", "Turn the build log into essays, activities and portfolios."],
 ];
 
-export function Venture({ label = "§04 — Venture coaching" }) {
+export function Venture({ label = "§05 — Venture coaching" }) {
   return (
     <section id="venture" className="section blueprint">
       <div className="wrap">
@@ -259,7 +304,7 @@ export function Outcomes() {
     <section id="testimonials" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§05 — Testimonials</span>
+          <span className="label">§06 — Testimonials</span>
           <h2>What students say.</h2>
         </div>
         <div className={shown.length === 2 ? "grid-2" : "grid-3"}>
@@ -302,7 +347,7 @@ export function Packages() {
     <section id="packages" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§06 — Packages</span>
+          <span className="label">§07 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
           <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
@@ -343,7 +388,7 @@ export function FAQ() {
     <section id="faq" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§07 — FAQ</span>
+          <span className="label">§08 — FAQ</span>
           <h2>Common questions.</h2>
         </div>
         <div className="faq">
