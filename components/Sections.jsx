@@ -125,8 +125,8 @@ export function Headshot() {
 
 export const aboutParagraphs = [
   <>I spent nine years as a product management leader, leading teams of engineers and designers to launch and commercialize new products at companies like Lyft, Intuit and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
-  <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads who majored in disciplines like engineering, business, and design.</>,
-  <>Now I help high school builders who are just starting their journey navigate the unique challenges that come with being admitted to a STEM major and landing in a STEM career: building things that matter to them, choosing colleges and programs that suit them, and helping them to tell their story on their application.</>,
+  <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
+  <>Now I help high schoolers navigate the unique challenges that come with the admissions process for engineering, design and business programs: building things that matter to them, choosing colleges and programs that suit them, and helping them to tell their story on their application.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
   <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
