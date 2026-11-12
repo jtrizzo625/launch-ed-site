@@ -57,7 +57,7 @@ export function WhoFor() {
 export const problems = [
   {
     title: "The portfolio",
-    body: "Strong applicants show what they've built and how they built it: the goals, setbacks, decisions they made along the way, and impact. Having launched products myself, I coach students through the entire, end-to-end process, from brainstorming to building to launching to iterating. ",
+    body: "Strong applicants have \"engineering or crafting projects of their own design and making that are substantial, original, and technically creative\" -MIT admissions. Having led teams through the process of taking a product idea from a prototype to eight figures in revenue at various companies, I coach students through their journey: from brainstorming to building to launching to iterating. ",
   },
   {
     title: "The major decision",
@@ -69,7 +69,7 @@ export const problems = [
   },
   {
     title: "Course planning",
-    body: "Engineering programs expect calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
+    body: "Engineering programs expect higher levels of calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
   },
   {
     title: "The essay",
@@ -105,7 +105,7 @@ export const stages = [
     title: "Grades 9–10: Explore & Build",
     items: [
       "Course planning for engineering, design or business major readiness",
-      "Project portfolio development coaching (products, businesses, apps, devices and more)",
+      "Project portfolio development coaching",
       "Extracurricular activities planning and prioritization",
       "Career and interest exploration coaching",
     ],
@@ -124,7 +124,7 @@ export const stages = [
     bar: ["GRADE 12", "APPLY"],
     title: "Grade 12: Apply",
     items: [
-      "Application essays: personal statement, supplemental essays, UC PIQs and more",
+      "Application essay coaching: personal statement, supplemental essays, UC PIQs and more",
       "Activities list and project write-ups",
       "Application timeline and submission",
       "Comparing financial aid offers",
@@ -203,7 +203,7 @@ export const ventureSteps = [
   ["Tell the story", "Turn the build log into essays, activities and portfolios."],
 ];
 
-export function Venture({ label = "§05 — Venture coaching" }) {
+export function Venture({ label = "§05 — maker portfolio building" }) {
   return (
     <section id="venture" className="section blueprint">
       <div className="wrap">
@@ -338,7 +338,7 @@ export const packages = [
   },
   {
     bar: ["ANY GRADE", "BUILD"],
-    title: "Venture & Project Coaching",
+    title: "Maker portfolio project coaching",
     text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today.",
     items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
   },
@@ -371,36 +371,6 @@ export function Packages() {
         <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
           Only need help with essays? <a href={site.essayLaunchUrl}>Essay Launch</a> offers essay-only coaching.
         </p>
-      </div>
-    </section>
-  );
-}
-
-export const faqs = [
-  ["Do you work with students outside Los Angeles?", "Yes. All sessions take place over video, so I work with families nationwide."],
-  ["When should we start?", "Students can start as early as 9th grade, when course and project choices begin to shape their options. Many families start college application support in the spring of junior year."],
-  ["Does my student need to have a project already?", "No. Some students come with a product or business underway; others come with an idea or just a curiosity. Venture coaching starts wherever your student is."],
-  ["Will you write my student's essays or build their project?", "No. Your student does the writing and the building. I coach, ask questions and give feedback, so the work stays authentically theirs."],
-  ["Can you guarantee admission to a particular college?", "No one can honestly guarantee admission. What I can promise is a thoughtful plan, a balanced college list, and applications that show who your student really is."],
-  ["How does pricing work?", "Multi-year planning and application support are offered as packages; venture coaching is hourly. After a free consultation, I'll send a quote based on your student's needs."],
-];
-
-export function FAQ() {
-  return (
-    <section id="faq" className="section graph">
-      <div className="wrap">
-        <div className="section-head">
-          <span className="label">§08 — FAQ</span>
-          <h2>Common questions.</h2>
-        </div>
-        <div className="faq">
-          {faqs.map(([q, a]) => (
-            <details key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
-        </div>
       </div>
     </section>
   );
