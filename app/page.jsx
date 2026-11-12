@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Frame from "@/components/Frame";
-import { FeaturedQuote, WhoFor, AboutBlock, HowIHelp, Venture, Outcomes, Packages, FAQ, CTA } from "@/components/Sections";
+import { FeaturedQuote, WhoFor, EngineeringProblem, AboutBlock, HowIHelp, Venture, Outcomes, Packages, CTA } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -34,12 +34,12 @@ export default function Home() {
       </section>
       <FeaturedQuote />
       <AboutBlock />
+      <EngineeringProblem />
       <WhoFor />
       <HowIHelp />
       <Venture />
       <Outcomes />
       <Packages />
-      <FAQ />
       <CTA />
     </>
   );

@@ -9,23 +9,23 @@ const iconProps = {
 
 export const paths = [
   {
-    title: "Mechanical or aerospace engineers",
-    text: "You're interested in robotics, drones, vehicles, aircraft and other engineering challenges in the physical realm.",
+    title: "They take things apart",
+    text: "They love robotics, drones, vehicles, aircraft or even just a good lego or minecraft challenge. They'd rather fix it than replace it.",
     icon: <svg {...iconProps}><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" /></svg>,
   },
   {
-    title: "Coders",
-    text: "You love to ship games or apps, contribute to open-source projects, and keep tabs on digital startups.",
+    title: "They teach themselves",
+    text: "They learn from Youtube tutorials and forums. They've made a game, a website, or a Discord bot. They tinker with the code just to see what happens.",
     icon: <svg {...iconProps}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" /></svg>,
   },
   {
-    title: "Founders",
-    text: "You want to start a small business or venture, which means tackling everything from pricing to branding to operations.",
+    title: "They have a \"side hustle\"",
+    text: "They start their own thing. Whether it's car detailing, lawn mowing, a custom phone case or T shirt, they naturally think about how to make a business idea a reality.",
     icon: <svg {...iconProps}><path d="M4 20h16M6 16l4-5 3 3 5-7M15 7h3v3" /></svg>,
   },
   {
-    title: "Designers",
-    text: "You see problems in the world and dream about designing elegant, creative, human-centered solutions to them.",
+    title: "They notice what could be better",
+    text: "They redesign their room, critique how apps work, sketch in the margins of their notes, or point out what's annoying about everyday things (physical or digital).",
     icon: <svg {...iconProps}><path d="M3 21l3-1 12-12-2-2L4 18l-1 3zM14 6l2 2M17 3l4 4" /></svg>,
   },
 ];
@@ -35,8 +35,9 @@ export function WhoFor() {
     <section id="for" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§02 — Who this is for</span>
+          <span className="label">§03 — Who this is for</span>
           <h2>Does this sound like your student?</h2>
+          <p className="section-intro">Many students don&apos;t know what they want to major in, or what careers they&apos;re interested in. That&apos;s ok. If at least one of the following are true about your student, we may be a good fit!</p>
         </div>
         <div className="grid-4">
           {paths.map((p) => (
@@ -47,6 +48,52 @@ export function WhoFor() {
             </div>
           ))}
         </div>
+        <p className="common-thread">The common thread: they&apos;re happiest when they&apos;re tinkering or creating things</p>
+      </div>
+    </section>
+  );
+}
+
+export const problems = [
+  {
+    title: "The portfolio",
+    body: "Strong applicants have \"engineering or crafting projects of their own design and making that are substantial, original, and technically creative\" -MIT admissions. Having led teams through the process of taking a product idea from a prototype to eight figures in revenue at various companies, I coach students through their journey: from brainstorming to building to launching to iterating. ",
+  },
+  {
+    title: "The major decision",
+    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible. Based on each school's unique rules and their interests, I help students choose the right major for them.",
+  },
+  {
+    title: "The college list",
+    body: "Engineering, business and design programs are often harder to get into than the university as a whole. I help students build a balanced college list while accounting for the specific  considerations of these majors.",
+  },
+  {
+    title: "Course planning",
+    body: "Engineering programs expect higher levels of calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
+  },
+  {
+    title: "The essay",
+    body: "Explaining technical work to non-technical readers, in a way that reveals authentic character and values, is a distinct writing challenge. It's the one that I specialize in guiding students through.",
+  },
+];
+
+export function EngineeringProblem() {
+  return (
+    <section id="problem" className="section blueprint problem-section">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="label">§02 — The problem</span>
+          <h2>General college advice doesn&apos;t account for admission to engineering, business and design programs. <em>I do.</em></h2>
+        </div>
+        <div className="problem-grid">
+          {problems.map((problem, index) => (
+            <div key={problem.title} className={`path${index === 0 ? " problem-featured" : ""}`}>
+              <h3>{problem.title}</h3>
+              <p>{problem.body}</p>
+            </div>
+          ))}
+        </div>
+        <Link href="#services" className="pkg-link">See how I help →</Link>
       </div>
     </section>
   );
@@ -58,7 +105,7 @@ export const stages = [
     title: "Grades 9–10: Explore & Build",
     items: [
       "Course planning for engineering, design or business major readiness",
-      "Project portfolio development coaching (products, businesses, apps, devices and more)",
+      "Project portfolio development coaching",
       "Extracurricular activities planning and prioritization",
       "Career and interest exploration coaching",
     ],
@@ -77,7 +124,7 @@ export const stages = [
     bar: ["GRADE 12", "APPLY"],
     title: "Grade 12: Apply",
     items: [
-      "Application essays: personal statement, supplemental essays, UC PIQs and more",
+      "Application essay coaching: personal statement, supplemental essays, UC PIQs and more",
       "Activities list and project write-ups",
       "Application timeline and submission",
       "Comparing financial aid offers",
@@ -85,7 +132,7 @@ export const stages = [
   },
 ];
 
-export function HowIHelp({ heading = "How I help", label = "§03 — How I help" }) {
+export function HowIHelp({ heading = "How I help", label = "§04 — How I help" }) {
   return (
     <section id="services" className="section graph">
       <div className="wrap">
@@ -125,8 +172,8 @@ export function Headshot() {
 
 export const aboutParagraphs = [
   <>I spent nine years as a product management leader, leading teams of engineers and designers to launch and commercialize new products at companies like Lyft, Intuit and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
-  <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads who majored in disciplines like engineering, business, and design.</>,
-  <>Now I help high school builders who are just starting their journey navigate the unique challenges that come with being admitted to a STEM major and landing in a STEM career: building things that matter to them, choosing colleges and programs that suit them, and helping them to tell their story on their application.</>,
+  <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
+  <>Now I help high schoolers navigate the unique challenges that come with the admissions process for engineering, design and business programs.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
   <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
@@ -156,7 +203,7 @@ export const ventureSteps = [
   ["Tell the story", "Turn the build log into essays, activities and portfolios."],
 ];
 
-export function Venture({ label = "§04 — Venture coaching" }) {
+export function Venture({ label = "§05 — maker portfolio building" }) {
   return (
     <section id="venture" className="section blueprint">
       <div className="wrap">
@@ -259,7 +306,7 @@ export function Outcomes() {
     <section id="testimonials" className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§05 — Testimonials</span>
+          <span className="label">§06 — Testimonials</span>
           <h2>What students say.</h2>
         </div>
         <div className={shown.length === 2 ? "grid-2" : "grid-3"}>
@@ -291,7 +338,7 @@ export const packages = [
   },
   {
     bar: ["ANY GRADE", "BUILD"],
-    title: "Venture & Project Coaching",
+    title: "Maker portfolio project coaching",
     text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today.",
     items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
   },
@@ -302,7 +349,7 @@ export function Packages() {
     <section id="packages" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§06 — Packages</span>
+          <span className="label">§07 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
           <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
@@ -324,36 +371,6 @@ export function Packages() {
         <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
           Only need help with essays? <a href={site.essayLaunchUrl}>Essay Launch</a> offers essay-only coaching.
         </p>
-      </div>
-    </section>
-  );
-}
-
-export const faqs = [
-  ["Do you work with students outside Los Angeles?", "Yes. All sessions take place over video, so I work with families nationwide."],
-  ["When should we start?", "Students can start as early as 9th grade, when course and project choices begin to shape their options. Many families start college application support in the spring of junior year."],
-  ["Does my student need to have a project already?", "No. Some students come with a product or business underway; others come with an idea or just a curiosity. Venture coaching starts wherever your student is."],
-  ["Will you write my student's essays or build their project?", "No. Your student does the writing and the building. I coach, ask questions and give feedback, so the work stays authentically theirs."],
-  ["Can you guarantee admission to a particular college?", "No one can honestly guarantee admission. What I can promise is a thoughtful plan, a balanced college list, and applications that show who your student really is."],
-  ["How does pricing work?", "Multi-year planning and application support are offered as packages; venture coaching is hourly. After a free consultation, I'll send a quote based on your student's needs."],
-];
-
-export function FAQ() {
-  return (
-    <section id="faq" className="section graph">
-      <div className="wrap">
-        <div className="section-head">
-          <span className="label">§07 — FAQ</span>
-          <h2>Common questions.</h2>
-        </div>
-        <div className="faq">
-          {faqs.map(([q, a]) => (
-            <details key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
-        </div>
       </div>
     </section>
   );
