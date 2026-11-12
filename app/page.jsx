@@ -34,8 +34,8 @@ export default function Home() {
       </section>
       <FeaturedQuote />
       <AboutBlock />
-      <WhoFor />
       <EngineeringProblem />
+      <WhoFor />
       <HowIHelp />
       <Venture />
       <Outcomes />

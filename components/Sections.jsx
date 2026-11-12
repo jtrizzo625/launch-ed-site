@@ -35,7 +35,7 @@ export function WhoFor() {
     <section id="for" className="section white">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§02 — Who this is for</span>
+          <span className="label">§03 — Who this is for</span>
           <h2>Does this sound like your student?</h2>
         </div>
         <div className="grid-4">
@@ -55,23 +55,23 @@ export function WhoFor() {
 export const problems = [
   {
     title: "The portfolio",
-    body: "Strong applicants show what they've built and how they built it: the goals, setbacks and decisions behind the work. Design programs often require a formal portfolio. Having launched products myself, I coach students through documenting and presenting their work.",
+    body: "Strong applicants show what they've built and how they built it: the goals, setbacks and decisions behind the work. Design programs often require a formal portfolio. Having launched products myself, I coach students through the entire, end-to-end process, from brainstorming to building to launching to iterating.",
   },
   {
     title: "The major decision",
-    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible.",
+    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible. Based on each school's unique rules and their interests, I help students choose the right major for them.",
   },
   {
     title: "The college list",
-    body: "These programs are often harder to get into than the university as a whole, so a school that looks like a safe bet may not be one for your student.",
+    body: "Engineering, business and design programs are often harder to get into than the university as a whole. I help students build a balanced college list while accounting for the specific  considerations of these majors.",
   },
   {
     title: "Course planning",
-    body: "Engineering programs expect calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade.",
+    body: "Engineering programs expect calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
   },
   {
     title: "The essay",
-    body: "Explaining technical work to non-technical readers, in a way that reveals character and values, is a distinct writing challenge. It's the one I specialize in.",
+    body: "Explaining technical work to non-technical readers, in a way that reveals character and values is a distinct writing challenge, and one I specialize in guiding students through.",
   },
 ];
 
@@ -80,8 +80,8 @@ export function EngineeringProblem() {
     <section id="problem" className="section blueprint problem-section">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">§03 — The problem</span>
-          <h2>General college advice doesn&apos;t account for how admission works for engineering, business and design programs. <em>I do.</em></h2>
+          <span className="label">§02 — The problem</span>
+          <h2>General college advice doesn&apos;t account for admission to engineering, business and design programs. <em>I do.</em></h2>
         </div>
         <div className="problem-grid">
           {problems.map((problem, index) => (
