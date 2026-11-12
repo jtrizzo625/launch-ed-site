@@ -9,23 +9,23 @@ const iconProps = {
 
 export const paths = [
   {
-    title: "Mechanical or aerospace engineers",
-    text: "You're interested in robotics, drones, vehicles, aircraft and other engineering challenges in the physical realm.",
+    title: "Physical builders",
+    text: "They love robotics, drones, vehicles, aircraft or even just a good lego  challenge.",
     icon: <svg {...iconProps}><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" /></svg>,
   },
   {
     title: "Coders",
-    text: "You love to ship games or apps, contribute to open-source projects, and keep tabs on digital startups.",
+    text: "They love to create games or apps, contribute to open-source projects, and keep tabs on digital startups.",
     icon: <svg {...iconProps}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" /></svg>,
   },
   {
     title: "Founders",
-    text: "You want to start a small business or venture, which means tackling everything from pricing to branding to operations.",
+    text: "They want to start a small business or \"side hustle\", which means tackling everything from pricing to branding to operations.",
     icon: <svg {...iconProps}><path d="M4 20h16M6 16l4-5 3 3 5-7M15 7h3v3" /></svg>,
   },
   {
     title: "Designers",
-    text: "You see problems in the world and dream about designing elegant, creative, human-centered solutions to them.",
+    text: "They  dream up creative solutions to the problems they see around them.",
     icon: <svg {...iconProps}><path d="M3 21l3-1 12-12-2-2L4 18l-1 3zM14 6l2 2M17 3l4 4" /></svg>,
   },
 ];
@@ -126,7 +126,7 @@ export function Headshot() {
 export const aboutParagraphs = [
   <>I spent nine years as a product management leader, leading teams of engineers and designers to launch and commercialize new products at companies like Lyft, Intuit and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
   <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
-  <>Now I help high schoolers navigate the unique challenges that come with the admissions process for engineering, design and business programs: building things that matter to them, choosing colleges and programs that suit them, and helping them to tell their story on their application.</>,
+  <>Now I help high schoolers navigate the unique challenges that come with the admissions process for engineering, design and business programs. What are these unique challenges? You can read more on my page here.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
   <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
