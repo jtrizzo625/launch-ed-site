@@ -171,16 +171,6 @@ p { margin: 0; }
 .pkg-link:hover { text-decoration: underline; }
 .module-body { flex: 1; }
 
-/* FAQ */
-.faq { background: var(--white); border: 1px solid var(--line); max-width: 900px; }
-.faq details { border-top: 1px solid var(--line); }
-.faq details:first-child { border-top: none; }
-.faq summary { cursor: pointer; list-style: none; padding: 22px 56px 22px 24px; font-size: 17px; font-weight: 500; color: var(--navy); position: relative; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; position: absolute; right: 24px; top: 18px; font-family: var(--mono); font-size: 22px; color: var(--accent); }
-.faq details[open] summary::after { content: "–"; }
-.faq details p { padding: 0 24px 22px; font-size: 15.5px; font-weight: 300; line-height: 1.7; color: var(--body); max-width: 760px; }
-
 /* Resources */
 .doc-card { text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 14px; }
 .doc-card .tag { font-family: var(--mono); font-size: 11.5px; color: var(--accent); }
