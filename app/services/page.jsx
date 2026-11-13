@@ -3,7 +3,7 @@ import { PageHero, HowIHelp, Venture, HowItWorks, CTA } from "@/components/Secti
 export const metadata = {
   title: "Services",
   description:
-    "College counseling by grade: course and project planning in grades 9–10, college list, financial aid and testing strategy in grade 11, and essays and applications in grade 12. Plus hourly venture and project coaching.",
+    "College counseling by grade: course and project planning in grades 9–10; college-list, financial-aid, and testing strategy in grade 11; and essay and application support in grade 12. Hourly venture and project coaching is also available.",
   alternates: { canonical: "/services" },
 };
 

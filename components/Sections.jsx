@@ -10,17 +10,17 @@ const iconProps = {
 export const paths = [
   {
     title: "They take things apart",
-    text: "They love robotics, drones, vehicles, aircraft or even just a good lego or minecraft challenge. They'd rather fix it than replace it.",
+    text: "They love robotics, drones, vehicles, aircraft, and hands-on LEGO or Minecraft challenges. They'd rather fix something than replace it.",
     icon: <svg {...iconProps}><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" /></svg>,
   },
   {
     title: "They teach themselves",
-    text: "They learn from Youtube tutorials and forums. They've made a game, a website, or a Discord bot. They tinker with the code just to see what happens.",
+    text: "They learn from YouTube tutorials and forums. They've made a game, a website, or a Discord bot. They tinker with code just to see what happens.",
     icon: <svg {...iconProps}><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" /></svg>,
   },
   {
     title: "They have a \"side hustle\"",
-    text: "They start their own thing. Whether it's car detailing, lawn mowing, a custom phone case or T shirt, they naturally think about how to make a business idea a reality.",
+    text: "They start their own thing, whether that's a service like car detailing or lawn mowing, or a product like a custom phone case or T-shirt. They naturally think about how to turn a business idea into reality.",
     icon: <svg {...iconProps}><path d="M4 20h16M6 16l4-5 3 3 5-7M15 7h3v3" /></svg>,
   },
   {
@@ -37,7 +37,7 @@ export function WhoFor() {
         <div className="section-head">
           <span className="label">§03 — Who this is for</span>
           <h2>Does this sound like your student?</h2>
-          <p className="section-intro">Many students don&apos;t know what they want to major in, or what careers they&apos;re interested in. That&apos;s ok. If at least one of the following are true about your student, we may be a good fit!</p>
+          <p className="section-intro">Many students don&apos;t know what they want to major in or which careers interest them. That&apos;s okay. If at least one of the following is true of your student, we may be a good fit.</p>
         </div>
         <div className="grid-4">
           {paths.map((p) => (
@@ -57,7 +57,7 @@ export function WhoFor() {
 export const problems = [
   {
     title: "The portfolio",
-    body: "Strong applicants have \"engineering or crafting projects of their own design and making that are substantial, original, and technically creative\" -MIT admissions. Having led teams through the process of taking a product idea from a prototype to eight figures in revenue at various companies, I coach students through their journey: from brainstorming to building to launching to iterating. ",
+    body: "MIT Admissions describes strong applicants as having “engineering or crafting projects of their own design and making that are substantial, original, and technically creative.” Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process—from brainstorming and building to launching and iterating.",
   },
   {
     title: "The major decision",
@@ -65,7 +65,7 @@ export const problems = [
   },
   {
     title: "The college list",
-    body: "Engineering, business and design programs are often harder to get into than the university as a whole. I help students build a balanced college list while accounting for the specific  considerations of these majors.",
+    body: "Engineering, business, and design programs are often harder to get into than the university as a whole. I help students build a balanced college list that accounts for the specific considerations of these majors.",
   },
   {
     title: "Course planning",
@@ -73,7 +73,7 @@ export const problems = [
   },
   {
     title: "The essay",
-    body: "Explaining technical work to non-technical readers, in a way that reveals authentic character and values, is a distinct writing challenge. It's the one that I specialize in guiding students through.",
+    body: "I specialize in helping students explain technical work to nontechnical readers in a way that reveals their character and values.",
   },
 ];
 
@@ -83,7 +83,7 @@ export function EngineeringProblem() {
       <div className="wrap">
         <div className="section-head">
           <span className="label">§02 — The problem</span>
-          <h2>General college advice doesn&apos;t account for admission to engineering, business and design programs. <em>I do.</em></h2>
+          <h2>General college advice doesn&apos;t account for admission to engineering, business, and design programs. <em>I do.</em></h2>
         </div>
         <div className="problem-grid">
           {problems.map((problem, index) => (
@@ -124,9 +124,9 @@ export const stages = [
     bar: ["GRADE 12", "APPLY"],
     title: "Grade 12: Apply",
     items: [
-      "Application essay coaching: personal statement, supplemental essays, UC PIQs and more",
+      "Application essay coaching: personal statements, supplemental essays, University of California Personal Insight Questions, and more",
       "Activities list and project write-ups",
-      "Application timeline and submission",
+      "Application timelines and submissions",
       "Comparing financial aid offers",
     ],
   },
@@ -171,11 +171,11 @@ export function Headshot() {
 }
 
 export const aboutParagraphs = [
-  <>I spent nine years as a product management leader, leading teams of engineers and designers to launch and commercialize new products at companies like Lyft, Intuit and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
+  <>I spent nine years as a product management leader, helping teams of engineers and designers launch and commercialize products at companies like Lyft, Intuit, and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
   <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
-  <>Now I help high schoolers navigate the unique challenges that come with the admissions process for engineering, design and business programs.</>,
+  <>Now I help high school students navigate the unique challenges of applying to engineering, design, and business programs.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
-  <>Prior to that, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship, where I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
+  <>Earlier in my career, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship. I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
 
 export function AboutBlock({ label = "§01 — About James Rizzo" }) {
@@ -197,9 +197,9 @@ export function AboutBlock({ label = "§01 — About James Rizzo" }) {
 
 export const ventureSteps = [
   ["Find a real problem", "Talk to the people who have it before building anything."],
-  ["Set the strategy", "Who it's for, what success looks like, what to skip."],
+  ["Set the strategy", "Who this is for, what success looks like, and what to skip."],
   ["Build the roadmap", "Milestones that fit around school, sports, and healthy rest."],
-  ["Ship it", "Launch a first version, get real users, learn from them."],
+  ["Launch it", "Release a first version, find real users, and learn from them."],
   ["Tell the story", "Turn the build log into essays, activities and portfolios."],
 ];
 
@@ -260,14 +260,14 @@ export const featuredTestimonial = {
   quote:
     "Working with James was an incredible experience! He helped me take my essay to the next level with thoughtful, detailed feedback and expert advice. Thanks to his guidance, my essay became so much stronger and more effective.",
   name: "Ethan C.",
-  detail: "Admitted to Stanford University, School of Engineering (Mech. E)",
+  detail: "Admitted to Stanford University, School of Engineering (Mechanical Engineering)",
 };
 
 export const testimonials = [
   {
     tag: "LOG_01 · STUDENT",
     quote:
-      "My favorite part of working with James was how open he was. Working with him was a dialogue, he wasn’t doing it for me or telling me what to do, he was guiding me to discover more about myself and express it. Also, James helped me talk about a technical design project I worked on in a way that was specific, understandable for a non technical audience, and made my impact clear. As a result of James’s help, I looked at my application and felt like I was a standout candidate.",
+      "My favorite part of working with James was how open he was. Working with him was a dialogue: he wasn’t doing it for me or telling me what to do; he was guiding me to discover more about myself and express it. James also helped me talk about a technical design project in a way that was specific, understandable to a nontechnical audience, and clear about my impact. With his help, I looked at my application and felt like I was a standout candidate.",
     by: "Andrew W. · 2026 application pending",
   },
   {
@@ -334,11 +334,11 @@ export const packages = [
     bar: ["GRADES 11–12", "APPLY"],
     title: "Application Package",
     text: "Full support from junior spring through submitted applications and financial aid offers.",
-    items: ["Balanced college list and ED/EA strategy", "Merit and need-based aid strategy", "All essays and the activities list", "Comparing financial aid offers"],
+    items: ["Balanced college list and early decision/early action strategy", "Merit and need-based aid strategy", "All essays and the activities list", "Comparing financial aid offers"],
   },
   {
     bar: ["ANY GRADE", "BUILD"],
-    title: "Maker portfolio project coaching",
+    title: "Maker Portfolio Project Coaching",
     text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today.",
     items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
   },
