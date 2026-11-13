@@ -61,7 +61,7 @@ export const problems = [
   },
   {
     title: "The major decision",
-    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible. Based on each school's unique rules and their interests, I help students choose the right major for them.",
+    body: "Many universities admit students directly into engineering or business programs, and seats are limited. Students who start in another major and try to switch later may find it difficult, or at some schools impossible. I help students select their major based on each school's unique rules and the student's individual interests.",
   },
   {
     title: "The college list",
@@ -173,7 +173,7 @@ export function Headshot() {
 export const aboutParagraphs = [
   <>I spent nine years as a product management leader, helping teams of engineers and designers launch and commercialize products at companies like Lyft, Intuit, and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
   <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
-  <>Now I help high school students navigate the unique challenges of applying to engineering, design, and business programs.</>,
+  <>Now I help high school students navigate the unique challenges of applying to engineering, design, and business programs. Now, I help high school students connect with their passion for building while navigating the unique challenges of applying to engineering, design and business programs.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
   <>Earlier in my career, I was part of the inaugural class of Schwarzman Scholars, a highly selective graduate fellowship. I earned a Master&apos;s in Global Affairs from Tsinghua University in Beijing, China.</>,
 ];
@@ -363,7 +363,7 @@ export function Packages() {
                 <ul className="spec">
                   {p.items.map((i) => <li key={i}>{i}</li>)}
                 </ul>
-                <Link href="/book" className="pkg-link">Discuss on a free call →</Link>
+                <a href={site.calendlyUrl} className="pkg-link">Discuss on a free call →</a>
               </div>
             </div>
           ))}
@@ -383,7 +383,7 @@ export function CTA() {
         <span className="label">Next step</span>
         <h2>Let&apos;s talk about what your student is building.</h2>
         <p className="lede">A free 30-minute consultation. You&apos;ll leave with at least one concrete next step, whether or not we work together.</p>
-        <Link href="/book" className="btn btn-primary">Book a free consultation →</Link>
+        <a href={site.calendlyUrl} className="btn btn-primary">Book a free consultation →</a>
       </div>
     </section>
   );
