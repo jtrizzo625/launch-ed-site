@@ -11,11 +11,11 @@ export default function Footer() {
           <a href={`mailto:${site.email}`} style={{ color: "#b7c4d3", fontSize: 14 }}>{site.email}</a>
         </div>
         <div className="footer-links">
-          <Link href="/#for">Who it&apos;s for</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/about">About</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/book">Book a consultation</Link>
+          <Link href="/#for">Who this is for</Link>
+          <Link href="/#services">Services</Link>
+          <Link href="/#about">About</Link>
+          <Link href="/#packages">Packages</Link>
+          <a href={site.calendlyUrl}>Book a free consultation</a>
         </div>
         <div className="footer-aside">
           <span>Only need help with essays?</span>

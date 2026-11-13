@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 const links = [
   { href: "/#for", label: "Who this is for" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
   { href: "/#packages", label: "Packages" },
-  { href: "/resources", label: "Resources" },
 ];
 
 export function LogoMark() {
@@ -34,7 +34,7 @@ export default function Header() {
           {links.map((l) => (
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}
-          <Link href="/book" className="btn btn-primary">Book a consultation →</Link>
+          <a href={site.calendlyUrl} className="btn btn-primary">Book a free consultation →</a>
         </nav>
         <details className="mobile-nav">
           <summary>Menu</summary>
@@ -42,7 +42,7 @@ export default function Header() {
             {links.map((l) => (
               <Link key={l.href} href={l.href}>{l.label}</Link>
             ))}
-            <Link href="/book">Book a consultation →</Link>
+            <a href={site.calendlyUrl}>Book a free consultation →</a>
           </nav>
         </details>
       </div>

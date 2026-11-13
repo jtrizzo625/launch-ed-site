@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 
 export default function sitemap() {
-  return ["", "/services", "/about", "/resources", "/book"].map((path) => ({
+  return [""].map((path) => ({
     url: `${site.url}${path}`,
     lastModified: new Date(),
     changeFrequency: "monthly",

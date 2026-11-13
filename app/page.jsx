@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Frame from "@/components/Frame";
 import { FeaturedQuote, WhoFor, EngineeringProblem, AboutBlock, HowIHelp, Venture, Outcomes, Packages, CTA } from "@/components/Sections";
+import { site } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -18,8 +19,8 @@ export default function Home() {
               develop their project ideas, build their college list, navigate financial aid, and write their application essays.
             </p>
             <div className="btn-row">
-              <Link href="/book" className="btn btn-primary">Book a free consultation →</Link>
-              <Link href="/services" className="btn btn-outline">Explore services</Link>
+              <a href={site.calendlyUrl} className="btn btn-primary">Book a free consultation →</a>
+              <Link href="/#services" className="btn btn-outline">Explore services</Link>
             </div>
           </div>
           <div className="hero-figure">
