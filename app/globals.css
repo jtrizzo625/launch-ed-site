@@ -178,6 +178,9 @@ p { margin: 0; }
 .doc-card .status { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
 /* Outcomes */
+.parent-testimonials { margin-top: 88px; }
+.parent-testimonials .section-head { margin-bottom: 32px; }
+.parent-testimonials h2 { font-size: 32px; }
 .quote { margin: 0; background: var(--white); border: 1px solid var(--line); padding: 30px 28px; display: flex; flex-direction: column; gap: 22px; }
 .quote blockquote { margin: 0; font-size: 17px; font-weight: 300; line-height: 1.65; }
 .quote figcaption { margin-top: auto; padding-top: 16px; border-top: 1px dashed var(--line); font-family: var(--mono); font-size: 12px; color: var(--muted); }

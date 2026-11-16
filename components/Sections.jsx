@@ -276,8 +276,21 @@ export const testimonials = [
       "Working with James was extremely helpful. He gave clear, thoughtful feedback. His comments were always detailed, honest and easy to apply, and I could tell he genuinely cared about helping me improve my writing. Thanks to his guidance, my essays became more focused, personal, and effective. I would highly recommend him to any student looking for college application guidance.",
     by: "Aaron S. · Admitted to UC Davis, Managerial Economics",
   },
-  // Parent testimonial: replace null with the quote and fill in `by`.
-  { tag: "LOG_03 · PARENT", quote: null, by: "" },
+ ];
+
+export const parentTestimonials = [
+  {
+    tag: "LOG_01 · PARENT",
+    quote:
+      "We didn’t know where to start. Both of us work, and our daughter who is applying to mechanical engineering programs is strong in math, but has difficulty with storytelling. James worked around her hectic schedule. She loved that he was straight to the point and easy to work with. His questions and guided brainstorming brought out a story I didn’t even know about my own daughter, and it’s still completely in her voice. I've noticed my daughter is more confident after working with James; this confidence is something I believe she'll take into college and has been an invaluable part of James's coaching. Having James be the one giving feedback has helped our mother-daughter relationship by making the process so much less stressful and more straightforward.",
+    by: "Esther C",
+  },
+  {
+    tag: "LOG_02 · PARENT",
+    quote:
+      'My son, a junior, had a "very productive" session with James (a high compliment from a teenager!) and we will be using him for the finishing touches on all the essays. James knowledge and intelligence level really shines in these sessions, but at the same time, he is very adept at connecting with teens on their level. He is helpful to parents also, navigating AI related topics with ease and knotching down the anxiety levels that come with college admission prep. Thank you James!',
+    by: "Marisa B",
+  },
 ];
 
 export function FeaturedQuote() {
@@ -301,23 +314,37 @@ export function FeaturedQuote() {
 export function Outcomes() {
   if (!site.showOutcomes) return null;
   const shown = testimonials.filter((t) => t.quote);
-  if (shown.length === 0) return null;
+  const parents = parentTestimonials.filter((t) => t.quote);
+  if (shown.length === 0 && parents.length === 0) return null;
+
+  const renderQuotes = (items) => (
+    <div className={items.length === 2 ? "grid-2" : "grid-3"}>
+      {items.map((t) => (
+        <figure key={t.tag} className="quote">
+          <span className="label" style={{ fontSize: 11.5 }}>{t.tag}</span>
+          <blockquote>“{t.quote}”</blockquote>
+          <figcaption>{t.by}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+
   return (
     <section id="testimonials" className="section graph">
       <div className="wrap">
         <div className="section-head">
           <span className="label">§06 — Testimonials</span>
-          <h2>What students say.</h2>
+          <h2>What students say</h2>
         </div>
-        <div className={shown.length === 2 ? "grid-2" : "grid-3"}>
-          {shown.map((t) => (
-            <figure key={t.tag} className="quote">
-              <span className="label" style={{ fontSize: 11.5 }}>{t.tag}</span>
-              <blockquote>“{t.quote}”</blockquote>
-              <figcaption>{t.by}</figcaption>
-            </figure>
-          ))}
-        </div>
+        {shown.length > 0 && renderQuotes(shown)}
+        {parents.length > 0 && (
+          <div className="parent-testimonials">
+            <div className="section-head">
+              <h2>What parents say</h2>
+            </div>
+            {renderQuotes(parents)}
+          </div>
+        )}
       </div>
     </section>
   );
