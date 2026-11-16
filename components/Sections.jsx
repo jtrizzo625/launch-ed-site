@@ -57,7 +57,7 @@ export function WhoFor() {
 export const problems = [
   {
     title: "The portfolio",
-    body: "MIT's optional Maker Portfolio welcomes “engineering or crafting projects of your own design and making that are substantial, original, and technically creative.” Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process, from brainstorming and building to launching and iterating.",
+    body: "MIT's Maker Portfolio welcomes “engineering or crafting projects of your own design and making that are substantial, original, and technically creative.” These types of independent projects are both personally enriching for students and advantageous in the admissions process. Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process, from brainstorming and building to launching and iterating their own \"maker\" projects.",
   },
   {
     title: "The major decision",

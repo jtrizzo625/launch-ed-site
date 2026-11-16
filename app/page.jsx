@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Frame from "@/components/Frame";
-import { FeaturedQuote, WhoFor, EngineeringProblem, AboutBlock, HowIHelp, Venture, Outcomes, Packages, HowItWorks, CTA } from "@/components/Sections";
+import { FeaturedQuote, WhoFor, EngineeringProblem, AboutBlock, HowIHelp, Venture, Outcomes, Packages, CTA } from "@/components/Sections";
 
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -42,7 +42,6 @@ export default function Home() {
       <Venture />
       <Outcomes />
       <Packages />
-      <HowItWorks />
       <CTA />
     </>
   );
