@@ -19,7 +19,7 @@ export default function Home() {
             </p>
             <div className="btn-row">
               <Link href="/book" className="btn btn-primary">Book a free consultation →</Link>
-              <Link href="/services" className="btn btn-outline">Explore services</Link>
+              <Link href="/#services" className="btn btn-outline">Explore services</Link>
             </div>
           </div>
           <div className="hero-figure">

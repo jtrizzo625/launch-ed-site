@@ -2,10 +2,9 @@ import Link from "next/link";
 
 const links = [
   { href: "/#for", label: "Who this is for" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
   { href: "/#packages", label: "Packages" },
-  { href: "/resources", label: "Resources" },
 ];
 
 export function LogoMark() {
