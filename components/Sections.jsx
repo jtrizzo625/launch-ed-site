@@ -73,7 +73,7 @@ export const problems = [
   },
   {
     title: "The essay",
-    body: "I specialize in helping students explain technical work to nontechnical readers in a way that reveals their character and values.",
+    body: "I specialize in helping students explain technical work to nontechnical readers in a way that reveals their unique individuality, character and values.",
   },
 ];
 
