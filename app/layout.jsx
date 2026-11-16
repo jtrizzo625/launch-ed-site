@@ -6,10 +6,11 @@ import { site } from "@/lib/site";
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Launch Educational Consulting | College Counseling for Students Who Build Things",
+    default: "College Counseling for Engineering, Design & Business Applicants | Launch Educational Consulting",
     template: "%s | Launch Educational Consulting",
   },
   description: site.description,
+  twitter: { card: "summary_large_image" },
   openGraph: {
     title: "Launch Educational Consulting",
     description: "College counseling for high school students who build things.",
@@ -18,7 +19,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  alternates: { canonical: "/" },
 };
 
 const jsonLd = {
@@ -29,7 +29,13 @@ const jsonLd = {
   email: site.email,
   description: site.description,
   areaServed: "US",
-  founder: { "@type": "Person", name: "James Rizzo" },
+  founder: {
+    "@type": "Person",
+    name: "James Rizzo",
+    jobTitle: "Independent Educational Consultant",
+    sameAs: ["https://www.linkedin.com/in/james-rizzo/", "https://essaylaunch.com"],
+  },
+  address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "California", addressCountry: "US" },
   serviceType: ["College counseling", "College essay coaching", "Financial aid guidance", "Student project coaching"],
 };
 

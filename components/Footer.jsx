@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="wrap footer-grid">
         <div className="footer-brand">
           <strong>LAUNCH EDUCATIONAL CONSULTING</strong>
-          <span>College counseling for students who build things. Virtual, serving families nationwide.</span>
+          <span>College counseling for students who build things. Based in Los Angeles and San Francisco, CA. Virtual, serving families nationwide.</span>
           <a href={`mailto:${site.email}`} style={{ color: "#b7c4d3", fontSize: 14 }}>{site.email}</a>
         </div>
         <div className="footer-links">

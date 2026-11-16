@@ -48,7 +48,7 @@ export function WhoFor() {
             </div>
           ))}
         </div>
-        <p className="common-thread">The common thread: they&apos;re happiest when they&apos;re tinkering or creating things</p>
+        <p className="common-thread">The common thread: they&apos;re happiest when they&apos;re tinkering or creating things.</p>
       </div>
     </section>
   );
@@ -57,7 +57,7 @@ export function WhoFor() {
 export const problems = [
   {
     title: "The portfolio",
-    body: "MIT Admissions describes strong applicants as having “engineering or crafting projects of their own design and making that are substantial, original, and technically creative.” Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process—from brainstorming and building to launching and iterating.",
+    body: "MIT's optional Maker Portfolio welcomes “engineering or crafting projects of your own design and making that are substantial, original, and technically creative.” Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process, from brainstorming and building to launching and iterating.",
   },
   {
     title: "The major decision",
@@ -65,11 +65,11 @@ export const problems = [
   },
   {
     title: "The college list",
-    body: "Engineering, business, and design programs are often harder to get into than the university as a whole. I help students build a balanced college list that accounts for the specific considerations of these majors.",
+    body: "Engineering and business programs are often harder to get into than the university as a whole. I help students build a balanced college list that accounts for the specific considerations of these majors.",
   },
   {
     title: "Course planning",
-    body: "Engineering programs expect higher levels of calculus, physics and chemistry before college. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
+    body: "Engineering programs expect calculus, physics and chemistry before college, and the most rigorous versions your school offers (honors, AP, IB or dual enrollment) strengthen an application. Getting there by senior year depends on choices made as early as 9th grade. I help students who may be interested in the engineering path plan their courses early.",
   },
   {
     title: "The essay",
@@ -118,6 +118,9 @@ export const stages = [
       "Financial aid strategy for both merit and need-based aid",
       "Early decision / early action strategy",
       "Testing strategy (SAT/ACT)",
+      "Summer planning",
+      "Recommendation letter strategy",
+      "Campus visits and demonstrated interest",
     ],
   },
   {
@@ -128,6 +131,9 @@ export const stages = [
       "Activities list and project write-ups",
       "Application timelines and submissions",
       "Comparing financial aid offers",
+      "Interview preparation",
+      "Deferral and waitlist support",
+      "Final decision support",
     ],
   },
 ];
@@ -171,7 +177,7 @@ export function Headshot() {
 }
 
 export const aboutParagraphs = [
-  <>I spent nine years as a product management leader, helping teams of engineers and designers launch and commercialize products at companies like Lyft, Intuit, and Headway (work featured in <a href={site.forbesUrl}>Forbes</a>).</>,
+  <>I spent nine years as a product management leader, helping teams of engineers and designers launch and commercialize products at companies like Lyft, Intuit, and Headway (a product I led, Lyft Assisted, was covered in <a href={site.forbesUrl}>Forbes</a>).</>,
   <>Along the way, I sat on hiring committees and read hundreds of résumés from college students and recent grads for positions in product management, engineering, design, marketing and operations.</>,
   <>Now I help high school students navigate the unique challenges of applying to engineering, design, and business programs.</>,
   <>My work on college essay writing has been published in the <a href={site.chronicleUrl}>San Francisco Chronicle</a>. I&apos;m also a College Counselor for ScholarMatch, hold a certificate in college counseling from NACAC (Core Concepts for IECs), am a career counselor for TheJobForum, and previously sat on the advisory board of Junior Achievement Northern California.</>,
@@ -237,7 +243,7 @@ export function HowItWorks() {
     <section className="section graph">
       <div className="wrap">
         <div className="section-head">
-          <span className="label">How it works</span>
+          <span className="label">§08 — How it works</span>
           <h2>From first conversation to submitted application.</h2>
         </div>
         <div className="grid-4">
@@ -260,7 +266,7 @@ export const featuredTestimonial = {
   quote:
     "Working with James was an incredible experience! He helped me take my essay to the next level with thoughtful, detailed feedback and expert advice. Thanks to his guidance, my essay became so much stronger and more effective.",
   name: "Ethan C.",
-  detail: "Admitted to Stanford University, School of Engineering (Mechanical Engineering)",
+  detail: "Admitted to Stanford University (intended major: mechanical engineering)",
 };
 
 export const testimonials = [
@@ -288,7 +294,7 @@ export const parentTestimonials = [
   {
     tag: "LOG_02 · PARENT",
     quote:
-      'My son, a junior, had a "very productive" session with James (a high compliment from a teenager!) and we will be using him for the finishing touches on all the essays. James knowledge and intelligence level really shines in these sessions, but at the same time, he is very adept at connecting with teens on their level. He is helpful to parents also, navigating AI related topics with ease and knotching down the anxiety levels that come with college admission prep. Thank you James!',
+      'My son, a junior, had a "very productive" session with James (a high compliment from a teenager!) and we will be using him for the finishing touches on all the essays. James\'s knowledge and intelligence level really shines in these sessions, but at the same time, he is very adept at connecting with teens on their level. He is helpful to parents also, navigating AI related topics with ease and notching down the anxiety levels that come with college admission prep. Thank you James!',
     by: "Marisa B",
   },
 ];
@@ -360,13 +366,13 @@ export const packages = [
   {
     bar: ["GRADES 11–12", "APPLY"],
     title: "Application Package",
-    text: "Full support from junior spring through submitted applications and financial aid offers.",
-    items: ["Balanced college list and early decision/early action strategy", "Merit and need-based aid strategy", "All essays and the activities list", "Comparing financial aid offers"],
+    text: "Full support from junior year through submitted applications and financial aid offers.",
+    items: ["Balanced college list and early decision/early action strategy", "Merit and need-based aid strategy", "Coaching on all essays and the activities list", "Comparing financial aid offers"],
   },
   {
     bar: ["ANY GRADE", "BUILD"],
     title: "Maker Portfolio Project Coaching",
-    text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today.",
+    text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today. Students do all of the building themselves.",
     items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
   },
 ];
@@ -378,7 +384,7 @@ export function Packages() {
         <div className="section-head">
           <span className="label">§07 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
-          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
+          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation. I work with a small number of families each year.</p>
         </div>
         <div className="grid-3">
           {packages.map((p) => (
@@ -396,6 +402,9 @@ export function Packages() {
           ))}
         </div>
         <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
+          A note on how I work: I coach, ask questions and give feedback, but I never write essays or build projects for students. I do not guarantee admissions outcomes; no ethical counselor can.
+        </p>
+        <p className="lede" style={{ marginTop: 16, fontSize: 16 }}>
           Only need help with essays? <a href={site.essayLaunchUrl}>Essay Launch</a> offers essay-only coaching.
         </p>
       </div>
