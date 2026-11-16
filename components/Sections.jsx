@@ -334,7 +334,7 @@ export function Outcomes() {
       <div className="wrap">
         <div className="section-head">
           <span className="label">§06 — Testimonials</span>
-          <h2>What students say.</h2>
+          <h2>What students say</h2>
         </div>
         {shown.length > 0 && renderQuotes(shown)}
         {parents.length > 0 && (
