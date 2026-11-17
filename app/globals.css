@@ -18,15 +18,21 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0;
+  overflow-x: clip;
   font-family: var(--sans);
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
-img { max-width: 100%; display: block; }
+img, svg, video, iframe { max-width: 100%; }
+img { display: block; }
+
+.wrap, .hero-grid, .hero-copy, .hero-figure, .figure, .frame,
+.section-head, .about-copy, .module, .module-body, .quote { min-width: 0; }
+.hero-grid > *, .about-grid > *, .grid-2 > *, .grid-3 > *, .grid-4 > *, .grid-5 > * { min-width: 0; }
 a { color: var(--navy); }
 a:hover { color: var(--accent); }
 
@@ -94,7 +100,7 @@ p { margin: 0; }
 .hero { padding: 104px 0 112px; }
 .hero-grid { display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: 72px; align-items: center; }
 .hero-copy { display: flex; flex-direction: column; gap: 28px; }
-.hero-tag { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; color: var(--blue-text); }
+.hero-tag { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; color: var(--blue-text); overflow-wrap: anywhere; }
 .hero h1 { font-weight: 500; font-size: 62px; line-height: 1.06; letter-spacing: -0.02em; }
 .hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--accent-light); }
 .dim { display: flex; align-items: center; gap: 10px; max-width: 420px; }
@@ -102,7 +108,7 @@ p { margin: 0; }
 .dim span.rule { flex: 1; height: 1px; background: var(--blue-line); }
 .dim span.val { font-family: var(--mono); font-size: 11px; color: var(--blue-text); }
 .figure { display: flex; flex-direction: column; gap: 10px; }
-.fig-caption { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--blue-text); }
+.fig-caption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; min-width: 0; font-family: var(--mono); font-size: 11px; color: var(--blue-text); }
 .graph .fig-caption, .white .fig-caption { color: var(--muted); }
 .frame { position: relative; aspect-ratio: 4 / 5; border: 1px solid var(--blue-line); background: rgba(127,168,209,0.08); }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
