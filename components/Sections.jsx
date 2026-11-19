@@ -56,8 +56,8 @@ export function WhoFor() {
 
 export const problems = [
   {
-    title: "The portfolio",
-    body: "MIT's Maker Portfolio welcomes “engineering or crafting projects of your own design and making that are substantial, original, and technically creative.” These types of independent projects are both personally enriching for students and advantageous in the admissions process. Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students through the process, from brainstorming and building to launching and iterating their own \"maker\" projects.",
+    title: "The \"side projects\"",
+    body: "Self-directed, independent projects are both personally enriching for students and advantageous in the admissions process. For example, MIT's Maker Portfolio welcomes “engineering or crafting projects of your own design and making that are substantial, original, and technically creative.” Having led teams that took product ideas from prototype to eight-figure revenue at various companies, I coach students who are interested in creating a project of their own through the process, from brainstorming and building to launching and iterating. This could be a app, physical product, or business idea.",
   },
   {
     title: "The major decision",
@@ -384,7 +384,7 @@ export function Packages() {
         <div className="section-head">
           <span className="label">§07 — Packages</span>
           <h2>Choose the support that fits where your student is.</h2>
-          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation. I work with a small number of families each year.</p>
+          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
         <div className="grid-3">
           {packages.map((p) => (
