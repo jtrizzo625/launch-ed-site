@@ -104,36 +104,36 @@ export const stages = [
     bar: ["GRADES 9–10", "EXPLORE"],
     title: "Grades 9–10: Explore & Build",
     items: [
-      "Course planning for engineering, design or business major readiness",
-      "Project portfolio development coaching",
-      "Extracurricular activities planning and prioritization",
-      "Career and interest exploration coaching",
+      "Course planning for engineering, design or business majors, including math and science sequences",
+      "Extracurricular and summer activity planning",
+      "Career and interest exploration",
+      "Project coaching for students building something of their own (add-on)",
     ],
   },
   {
     bar: ["GRADE 11", "PLAN"],
     title: "Grade 11: Plan & Position",
     items: [
+      "Course planning for 12th grade",
       "Building a balanced college list",
       "Financial aid strategy for both merit and need-based aid",
       "Early decision / early action strategy",
-      "Testing strategy (SAT/ACT)",
-      "Summer planning",
+      "SAT/ACT testing strategy (strategy, not test prep)",
       "Recommendation letter strategy",
       "Campus visits and demonstrated interest",
+      "Advice and coaching on choosing summer activities",
     ],
   },
   {
     bar: ["GRADE 12", "APPLY"],
     title: "Grade 12: Apply",
     items: [
-      "Application essay coaching: personal statements, supplemental essays, University of California Personal Insight Questions, and more",
+      "Essay coaching: personal statements, supplemental essays, University of California Personal Insight Questions and scholarship essays",
       "Activities list and project write-ups",
-      "Application timelines and submissions",
-      "Comparing financial aid offers",
+      "Application timelines and deadlines",
       "Interview preparation",
-      "Deferral and waitlist support",
-      "Final decision support",
+      "Comparing financial aid offers",
+      "Deferral, waitlist and final-decision support",
     ],
   },
 ];
@@ -145,6 +145,7 @@ export function HowIHelp({ heading = "How I help", label = "§04 — How I help"
         <div className="section-head">
           <span className="label">{label}</span>
           <h2>{heading}</h2>
+          <p className="lede">Support from 9th grade through final college decisions. Families can start any time from 9th grade through the spring of 11th grade.</p>
         </div>
         <div className="grid-3">
           {stages.map((s) => (
@@ -351,62 +352,6 @@ export function Outcomes() {
             {renderQuotes(parents)}
           </div>
         )}
-      </div>
-    </section>
-  );
-}
-
-export const packages = [
-  {
-    bar: ["GRADES 9–10", "PLAN"],
-    title: "Builder Roadmap",
-    text: "A yearly plan for younger students: course planning, extracurricular and summer strategy, and a project to build over time.",
-    items: ["Course and extracurricular planning", "Project and portfolio development", "Career and interest exploration", "Rolls into the Application Package"],
-  },
-  {
-    bar: ["GRADES 11–12", "APPLY"],
-    title: "Application Package",
-    text: "Full support from junior year through submitted applications and financial aid offers.",
-    items: ["Balanced college list and early decision/early action strategy", "Merit and need-based aid strategy", "Coaching on all essays and the activities list", "Comparing financial aid offers"],
-  },
-  {
-    bar: ["ANY GRADE", "BUILD"],
-    title: "Maker Portfolio Project Coaching",
-    text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today. Students do all of the building themselves.",
-    items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
-  },
-];
-
-export function Packages() {
-  return (
-    <section id="packages" className="section white">
-      <div className="wrap">
-        <div className="section-head">
-          <span className="label">§07 — Packages</span>
-          <h2>Choose the support that fits where your student is.</h2>
-          <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
-        </div>
-        <div className="grid-3">
-          {packages.map((p) => (
-            <div key={p.title} className="module">
-              <div className="module-bar"><span>{p.bar[0]}</span><span>{p.bar[1]}</span></div>
-              <div className="module-body">
-                <h3>{p.title}</h3>
-                <p className="pkg-text">{p.text}</p>
-                <ul className="spec">
-                  {p.items.map((i) => <li key={i}>{i}</li>)}
-                </ul>
-                <Link href="/book" className="pkg-link">Discuss on a free call →</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
-          A note on how I work: I coach, ask questions and give feedback, but I never write essays or build projects for students. I do not guarantee admissions outcomes; no ethical counselor can.
-        </p>
-        <p className="lede" style={{ marginTop: 16, fontSize: 16 }}>
-          Only need help with essays? <a href={site.essayLaunchUrl}>Essay Launch</a> offers essay-only coaching.
-        </p>
       </div>
     </section>
   );

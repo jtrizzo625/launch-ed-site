@@ -14,7 +14,6 @@ export default function Footer() {
           <Link href="/#for">Who this is for</Link>
           <Link href="/#services">Services</Link>
           <Link href="/#about">About</Link>
-          <Link href="/#packages">Packages</Link>
           <Link href="/book">Book a consultation</Link>
         </div>
         <div className="footer-aside">
