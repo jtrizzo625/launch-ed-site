@@ -105,8 +105,8 @@ export const stages = [
     title: "Grades 9–10: Explore & Build",
     items: [
       "Course planning for engineering, design or business major readiness",
-      "Project portfolio development coaching",
-      "Extracurricular activities planning and prioritization",
+      "Project coaching (available as an add-on)",
+      "Extracurricular and summer activity planning",
       "Career and interest exploration coaching",
     ],
   },
@@ -117,10 +117,11 @@ export const stages = [
       "Building a balanced college list",
       "Financial aid strategy for both merit and need-based aid",
       "Early decision / early action strategy",
-      "Testing strategy (SAT/ACT)",
-      "Summer planning",
+      "SAT/ACT testing strategy (strategy, not test prep)",
+      "Advice and coaching on choosing summer activities",
       "Recommendation letter strategy",
       "Campus visits and demonstrated interest",
+      "Course planning for 12th grade",
     ],
   },
   {
@@ -129,7 +130,7 @@ export const stages = [
     items: [
       "Application essay coaching: personal statements, supplemental essays, University of California Personal Insight Questions, and more",
       "Activities list and project write-ups",
-      "Application timelines and submissions",
+      "Application timelines and deadlines",
       "Comparing financial aid offers",
       "Interview preparation",
       "Deferral and waitlist support",
@@ -217,6 +218,7 @@ export function Venture({ label = "§05 — maker portfolio building" }) {
           <span className="label">{label}</span>
           <h2>Your student has ideas. I coach them on how to bring them to life.</h2>
           <p className="lede">Students get the same playbook I used to launch products at Lyft and Intuit, scaled to a teenager&apos;s time and budget.</p>
+          <p className="lede">Project coaching is available as an add-on to any counseling package.</p>
         </div>
         <div className="grid-5">
           {ventureSteps.map(([t, d], i) => (
@@ -358,22 +360,28 @@ export function Outcomes() {
 
 export const packages = [
   {
-    bar: ["GRADES 9–10", "PLAN"],
-    title: "Builder Roadmap",
-    text: "A yearly plan for younger students: course planning, extracurricular and summer strategy, and a project to build over time.",
-    items: ["Course and extracurricular planning", "Project and portfolio development", "Career and interest exploration", "Rolls into the Application Package"],
+    bar: ["START", "ANY TIME IN 9TH GRADE"],
+    title: "Grades 9–12 Launch",
+    text: "Our most complete package: planning from 9th grade through final college decisions.",
+    items: ["9th and 10th grade course and extracurricular planning", "Summer activity coaching every summer", "11th grade planning, testing strategy and recommendation letters", "Full application-year support"],
   },
   {
-    bar: ["GRADES 11–12", "APPLY"],
-    title: "Application Package",
-    text: "Full support from junior year through submitted applications and financial aid offers.",
-    items: ["Balanced college list and early decision/early action strategy", "Merit and need-based aid strategy", "Coaching on all essays and the activities list", "Comparing financial aid offers"],
+    bar: ["START", "SUMMER BEFORE 10TH – END OF 10TH"],
+    title: "Grades 10–12 Launch",
+    text: "Planning from 10th grade through final college decisions.",
+    items: ["10th grade course planning, including 11th grade courses", "Summer activity coaching", "11th grade planning, testing strategy and recommendation letters", "Full application-year support"],
   },
   {
-    bar: ["ANY GRADE", "BUILD"],
-    title: "Maker Portfolio Project Coaching",
-    text: "Hourly coaching for students building a product, business, app or device, tailored to where the project is today. Students do all of the building themselves.",
-    items: ["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"],
+    bar: ["START", "SUMMER BEFORE 11TH – FALL OF 11TH"],
+    title: "Grades 11–12 Launch",
+    text: "Support from the summer before junior year through final college decisions.",
+    items: ["Summer activity coaching", "11th grade course planning and starting the college list", "Testing strategy and recommendation letters", "Full application-year support"],
+  },
+  {
+    bar: ["START", "SPRING OF 11TH GRADE"],
+    title: "Grade 12 Launch",
+    text: "Focused support for the application year, starting in the spring of junior year.",
+    items: ["Testing strategy, recommendation letters and 12th grade courses", "Campus visits and demonstrated interest", "Summer activity coaching and essays begin", "Full application-year support"],
   },
 ];
 
@@ -386,7 +394,7 @@ export function Packages() {
           <h2>Choose the support that fits where your student is.</h2>
           <p className="lede">Pricing depends on your student&apos;s grade, goals and college list. I&apos;ll share a clear quote after your free consultation.</p>
         </div>
-        <div className="grid-3">
+        <div className="grid-4">
           {packages.map((p) => (
             <div key={p.title} className="module">
               <div className="module-bar"><span>{p.bar[0]}</span><span>{p.bar[1]}</span></div>
@@ -400,6 +408,20 @@ export function Packages() {
               </div>
             </div>
           ))}
+        </div>
+        <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
+          Every package includes full application-year support: a curated best-fit list of up to 20 schools, support on up to 12 applications, essay coaching for up to 12 schools (personal statement, supplements and UC Personal Insight Questions), the activities list and project write-ups, recommendation-letter guidance, interview prep, major and career exploration, financial aid strategy, and deferral, waitlist and final-decision support. All meetings are 1:1, virtual and 1 hour long, and they&apos;re weekly from the spring of 11th grade through 12th grade.
+        </p>
+        <div className="module" style={{ marginTop: 24 }}>
+          <div className="module-bar"><span>ADD-ON</span><span>ANY PACKAGE</span></div>
+          <div className="module-body">
+            <h3>Project Coaching (add-on)</h3>
+            <p className="pkg-text">Engineering, product design or entrepreneurship: guidance as your student develops and builds a project of their own. Includes one additional 1-hour meeting per month for up to 12 months. Students do all of the building themselves.</p>
+            <ul className="spec">
+              {["Product strategy and roadmap", "Launching and finding first users", "Measuring what's working", "Documenting the work for applications"].map((i) => <li key={i}>{i}</li>)}
+            </ul>
+            <Link href="/book" className="pkg-link">Discuss on a free call →</Link>
+          </div>
         </div>
         <p className="lede" style={{ marginTop: 32, fontSize: 16 }}>
           A note on how I work: I coach, ask questions and give feedback, but I never write essays or build projects for students. I do not guarantee admissions outcomes; no ethical counselor can.
