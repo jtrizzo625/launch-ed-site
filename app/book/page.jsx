@@ -3,8 +3,16 @@ import { site } from "@/lib/site";
 
 export const metadata = {
   title: "Book a Free Consultation",
-  description: "Book a free 30-minute consultation with James Rizzo of Launch Educational Consulting.",
+  description:
+    "Book a free 30-minute consultation with James Rizzo to discuss college counseling for your engineering, design, or business-minded student.",
   alternates: { canonical: "/book" },
+  openGraph: {
+    title: "Book a Free Consultation",
+    description:
+      "Book a free 30-minute consultation with James Rizzo to discuss college counseling for your engineering, design, or business-minded student.",
+    url: "/book",
+    images: [{ url: "/hero-drawing.svg" }],
+  },
 };
 
 export default function BookPage() {

@@ -2,7 +2,12 @@ import Link from "next/link";
 import Frame from "@/components/Frame";
 import { FeaturedQuote, WhoFor, EngineeringProblem, AboutBlock, HowIHelp, Venture, Outcomes, CTA } from "@/components/Sections";
 
-export const metadata = { alternates: { canonical: "/" } };
+export const metadata = {
+  title: { absolute: "College Counseling for Engineering & Design Applicants" },
+  description:
+    "College counseling for high school students who build things: course planning, project coaching, college lists, financial aid and application essays.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

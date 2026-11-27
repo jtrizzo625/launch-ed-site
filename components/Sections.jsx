@@ -138,14 +138,13 @@ export const stages = [
   },
 ];
 
-export function HowIHelp({ heading = "How I help", label = "§04 — How I help" }) {
+export function HowIHelp({ heading = "How I help", label = "§04 — What I do" }) {
   return (
     <section id="services" className="section graph">
       <div className="wrap">
         <div className="section-head">
           <span className="label">{label}</span>
           <h2>{heading}</h2>
-          <p className="lede">Support from 9th grade through final college decisions. Families can start any time from 9th grade through the spring of 11th grade.</p>
         </div>
         <div className="grid-3">
           {stages.map((s) => (
