@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL("https://www.launcheduconsulting.com"),
   title: {
-    default: "College Counseling for Engineering, Design & Business Applicants | Launch Educational Consulting",
+    default: "College Counseling for Engineering & Design Applicants",
     template: "%s | Launch Educational Consulting",
   },
   description: site.description,
@@ -18,6 +18,7 @@ export const metadata = {
     siteName: site.name,
     locale: "en_US",
     type: "website",
+    images: [{ url: "/hero-drawing.svg" }],
   },
 };
 
@@ -25,7 +26,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: site.name,
-  url: site.url,
+  url: "https://www.launcheduconsulting.com",
   email: site.email,
   description: site.description,
   areaServed: "US",
@@ -36,7 +37,10 @@ const jsonLd = {
     sameAs: ["https://www.linkedin.com/in/james-rizzo/", "https://essaylaunch.com"],
   },
   address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "California", addressCountry: "US" },
-  serviceType: ["College counseling", "College essay coaching", "Financial aid guidance", "Student project coaching"],
+  makesOffer: ["College counseling", "College essay coaching", "Financial aid guidance", "Student project coaching"].map((name) => ({
+    "@type": "Offer",
+    itemOffered: { "@type": "Service", name },
+  })),
 };
 
 export default function RootLayout({ children }) {

@@ -1,4 +1,4 @@
-# launcheduconsulting.com
+# www.launcheduconsulting.com
 
 Website for Launch Educational Consulting, built with Next.js and hosted on Vercel.
 
