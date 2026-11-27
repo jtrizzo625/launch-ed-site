@@ -254,6 +254,7 @@ p { margin: 0; }
 @media (max-width: 560px) {
   .grid-4, .grid-3 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 38px; }
+  .hero-figure { display: none; }
 }
 
 /* Featured quote under hero */
